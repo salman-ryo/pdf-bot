@@ -60,7 +60,7 @@ python main.py "What is the content of section 2 in the PDF?"
 
 # Interactive mode:
 python main.py
-Query>> What is the process described in the document?
+Query>> What is the content of section 2 in the PDF?
 
 Did the documents change/update or is this the first time running this script? (y/n) [n]: (If you update or add new pdfs to folder, enter 'yes' (y) or 'no' (n which is default))
 ```
