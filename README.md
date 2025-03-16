@@ -20,6 +20,7 @@ project/
 ├── database.py             # Chroma DB operations (indexing & querying)
 ├── llm_handler.py          # LLM integration for answer generation
 ├── process_documents.py    # Pipeline to process and index PDFs
+├── ollama_embeddings.py    # Handling embeddings
 └── main.py                 # Main entry point orchestrating the workflow
 ```
 

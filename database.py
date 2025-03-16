@@ -2,11 +2,11 @@
 from ollama_embeddings import OllamaEmbeddings
 from langchain_chroma import Chroma
 from langchain.schema.document import Document
-from config import CHROMA_PATH, EMBEDDING_MODEL
+from config import CHROMA_PATH, EMBEDDING_MODEL, BASE_URL
 
 def add_to_chroma_db(chunks: list[Document]):
     # Initialize embeddings using the model from config
-    embeddings = OllamaEmbeddings(model_name=EMBEDDING_MODEL)
+    embeddings = OllamaEmbeddings(model_name=EMBEDDING_MODEL,base_url=BASE_URL)
     db = Chroma.from_documents(
         documents=chunks,
         embedding=embeddings,
@@ -16,7 +16,7 @@ def add_to_chroma_db(chunks: list[Document]):
 
 def query_db(question: str) -> str:
     # Initialize embeddings using the model from config
-    embeddings = OllamaEmbeddings(model_name=EMBEDDING_MODEL)
+    embeddings = OllamaEmbeddings(model_name=EMBEDDING_MODEL,base_url=BASE_URL)
     db = Chroma(
         persist_directory=CHROMA_PATH,
         embedding_function=embeddings

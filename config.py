@@ -1,3 +1,6 @@
+#Ollama URL
+BASE_URL="http://localhost:11434"
+
 # Paths and folders
 CHROMA_PATH = "./chroma_db"
 DATA_FOLDER = "./data"
